@@ -1,4 +1,4 @@
-### This script used to generate 50 inidividual p-values for population scans
+### This script used to generate single p-values for population pair scans
 
 import argparse
 import random as rd
