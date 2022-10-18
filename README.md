@@ -13,3 +13,5 @@ Various bootstrap resampling scripts to test for significant differences between
 Note: Resampling relies on the pseudo-random number generator module in python ('random'). For identical p-value output, seed random generator in script before the first call to the random module (e.g. random.seed(10)).
 
 For help on input requirements on script, run script with 'help' flag. ($python bootstrap_5.0.22.py --help).
+Scripts have been tested and run on Python versions 3.x.
+Required modules: random, argparse, numpy, pandas, itertools, decimal.Decimal
