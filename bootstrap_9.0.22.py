@@ -1,4 +1,4 @@
-#### Population scan (Tim work) individual pvalue testing
+#### Population scan individual pvalue testing
 
 import argparse
 import random as rd
