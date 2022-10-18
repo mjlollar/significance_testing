@@ -10,7 +10,7 @@ Various bootstrap resampling scripts to test for significant differences between
 
 9.0 - Individual cross significance test for samples in Figure 1 (B and C). Generates p-values for individual crosses used in preliminary scans. (Table S2,S3) 
 
-Note: Resampling relies on the pseudo-random number generator module in python ('random'). For identical p-value output, seed random generator in script before the first call to the random module (e.g. random.seed(10)).
+Note: Resampling relies on the pseudo-random number generator module in python ('random'). Identical input to script may produce marginally different output. Seed random generator in script before the first call to the random module (e.g. random.seed(10)) if this behavior is undesired.
 
 For help on input requirements on script, run script with 'help' flag. ($python bootstrap_5.0.22.py --help).
 Scripts have been tested and run on Python versions 3.x.
