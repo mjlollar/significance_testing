@@ -1,3 +1,5 @@
+### R script used to run one-way ANOVA between populations in Figure 1A.
+
 ## Within Population Datasets
 w_FR <- c(0.968, 0.772, 0.775)
 w_ZI <- c(0.787, 0.842, 0.643)
