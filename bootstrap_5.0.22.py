@@ -10,6 +10,7 @@ from decimal import Decimal
 #Seed random generator if equivalant p_values between script runs are desired
 #rd.seed(10)
 
+### Inputs (run '--help' for descriptions)
 parser = argparse.ArgumentParser(description='P-value Bootstrapper')
 parser.add_argument('--i', help='Input File Path', required=True)
 parser.add_argument('--wn', help='Within Population Numerator Column Header',required=True)
@@ -51,7 +52,6 @@ for x,y in between_crosses:
 	for rep in range(0,args.n):
 		## Pick random within population cross
 		line_one_w = rd.choice(wh_comb) # Random line in grid, one_w is considered 
-		# Pick 
 		if line_one_w in wh_one:
 			waldo = np.where(wh_one == line_one_w)
 			new_one = np.delete(wh_one, waldo)
