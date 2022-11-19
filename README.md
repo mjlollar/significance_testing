@@ -1,6 +1,6 @@
 # Description
 
-This repository contains scripts used to generate p-values in Lollar et al. 2022[1]. All scripts can be run from personal computers, with an input file format requirement of a comma-separated file (csv), header included
+This repository contains scripts used to generate p-values in Lollar et al. 2022[1]. All scripts can be run from personal computers, with one requirement that input file take the format of a comma-separated file (csv) with headers. Headers are required as input flags are mostly header names for dataset categories.
 
 Call script with '--help' flag for information on the input requirement (header names) for each script. 
 
