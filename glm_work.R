@@ -1,54 +1,42 @@
-setwd("/Users/matt/Desktop/paper_review/glm")
-df <- read.csv('glm_input_022123.csv', header=T, as.is=T)
-df <-read.csv('glm_input_1_success_022123.csv',header=T, as.is=T)
+#GLM dummy model
+df_dummy <- read.csv('glm_input_dummy_0323.csv', header=T, as.is=T)
 
+df_dummy$maternal <- as.factor(df_dummy$maternal) 
+df_dummy$paternal <- as.factor(df_dummy$paternal)
+df_dummy$type <- as.factor(df_dummy$type)
 
-library('arm')
-library('magritter')
-library('tidyverse')
-library('dplyr')
+df_dummy$maternal <- relevel(df_dummy$maternal, ref='AM')
+df_dummy$paternal <-relevel(df_dummy$paternal, ref='AP')
 
-df$maternal <- as.factor(df$maternal)
+glm.1 <- glm(family="quasibinomial", formula=status ~ type + maternal + paternal, data=df_dummy)
+summary(glm.1)
+
+#GLM closest strain to mean
+### Get closest strain mean
+df <- read.csv('glm_input_010923.csv', header=T, as.is=T) #load dataframe
+
+df$maternal <- as.factor(df$maternal) 
 df$paternal <- as.factor(df$paternal)
 df$type <- as.factor(df$type)
 
-#Model 1
-glm.fit.1 <- glm(family="quasibinomial",formula=status ~ type, data=df)
-fit.1 <- summary(glm.fit.1)
-display(glm.fit.1,digits=3)
+group_maternal <- aggregate(df$status,list(df$maternal),mean)
+group_paternal <- aggregate(df$status,list(df$paternal),mean)
+m <- mean(group_maternal$x)
+p <- mean(group_paternal$x)
+m_diff <- abs(group_maternal$x - m)
+p_diff <- abs(group_paternal$x - p)
+which.min(m_diff) # 8, Z2
+which.min(p_diff) # 8, Z2
 
-#### https://www.science.smith.edu/~jcrouser/SDS293/labs/lab4-r.html
-glm_prob <- data.frame(probs = predict(glm.fit.1, type="response"))
-glm_pred <- glm_prob %>%
-  mutate(pred=ifelse(probs>.5,"1","0"))
-glm_pred = cbind(df, glm_pred)
-glm_pred %>%
-  count(pred, status) %>%
-  spread(status, n, fill=0)
-glm_pred %>%
-  summarize(score=mean(pred== status)) # Prediction rate
-####
+# index position coords
+# 1  2  3  4  5  6   7  8  9  10
+# f1 f2 f3 f4 f5 zi1 z2 z3 z4 z5 
 
+which.min(m_diff) # 8, Z2
+which.min(p_diff) # 8, Z2
 
-#Model 2
-glm.fit.2 <- glm(formula=status ~ type + maternal + paternal, data=df)
-fit.2 <- summary(glm.fit.2)
-display(glm.fit.2)
+df$maternal <- relevel(df$maternal, ref='Z2')
+df$paternal <- relevel(df$paternal, ref='Z2')
 
-#### https://www.science.smith.edu/~jcrouser/SDS293/labs/lab4-r.html
-glm_prob <- data.frame(probs = predict(glm.fit.2, type="response"))
-glm_pred <- glm_prob %>%
-  mutate(pred=ifelse(probs>.5,"1","0"))
-glm_pred = cbind(df, glm_pred)
-glm_pred %>%
-  count(pred, status) %>%
-  spread(status, n, fill=0)
-glm_pred %>%
-  summarize(score=mean(pred== status)) # Prediction rate
-####
-
-# Model 3
-glm.fit.3 <- glm(formula=status ~ type + maternal + paternal + maternal:paternal, data=df)
-fit.3 <- summary(glm.fit.3)
-display(glm.fit.2.f3)
-fit.2.f3
+glm.2 <- glm(family="quasibinomial", formula=status ~ type + maternal + paternal, data=df)
+summary(glm.2)
