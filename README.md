@@ -5,6 +5,8 @@ This repository contains scripts used to generate p-values using various methods
 # Repository includes:
 
 ## Bootstrap resampling (python)
+Note: Resampling relies on the pseudo-random number generator module in python ('random'). Due to this, identical inputs to script may produce slightly different output. To force identical outputs for a given input, seed the random generator in script before the first call to the random module (e.g. rd.seed(10)).
+
 5.0 - Combined-cross significance test for 5x5 grid in Figure 2. Generates p-values for each of the 25 crosses. [1]
 
 6.0 - Cross-direction significance test for selected crosses in Figure 2. Generates p-values for each cross used in cross-direciton test. [1]
@@ -23,8 +25,6 @@ This repository contains scripts used to generate p-values using various methods
 
 ## Anova 
 - R scripts for simple anova in [1]
-
-Note: Resampling relies on the pseudo-random number generator module in python ('random'). Due to this, identical inputs to script may produce slightly different output. To force identical outputs for a given input, seed the random generator in script before the first call to the random module (e.g. rd.seed(10)).
 
 # Cited by: 
 [1] https://www.biorxiv.org/content/10.1101/2022.10.13.512131v1
