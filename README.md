@@ -4,7 +4,7 @@ This repository contains scripts used to generate p-values using various methods
 Many of the python scripts can be called with a '--help' flag for information on the exact input requirement (header names) for each script. 
 
 # Repository includes:
- Bootstrap versions include:
+Bootstrap versions include:
 5.0 - Combined-cross significance test for 5x5 grid in Figure 2. Generates p-values for each of the 25 crosses. [1]
 6.0 - Cross-direction significance test for selected crosses in Figure 2. Generates p-values for each cross used in cross-direciton test. [1]
 7.0 - Individual cross significance test for 5x5 grid in Figure 2. Generates p-values for each of the 50 unique crosses in the grid. [1]
