@@ -17,10 +17,10 @@ Note: Resampling relies on the pseudo-random number generator module in python (
 
 9.0 - Individual cross significance test for samples in Figure 1 (B and C). Generates p-values for individual crosses used in preliminary scans. [1] 
 
-## Generalied Linear Model
+## Linear regression models
 - R scripts for glm used in [1]
 
-## Multiple Testing corrections
+## Multiple testing corrections
 - R scripts for Benjamini-Hochberg corrections adjustments in [1]
 
 ## Anova 
