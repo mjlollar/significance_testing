@@ -18,11 +18,11 @@ This repository contains scripts used to generate p-values using various methods
 ## Generalied Linear Model
 - R scripts for glm used in [1]
 
-## Benjamini-Hochberg corrections to data
-- R scrtips for multiple testing p-value adjustments in [1]
+## Multiple Testing corrections
+- R scripts for Benjamini-Hochberg corrections adjustments in [1]
 
 ## Anova 
-- R scripts for anova in [1]
+- R scripts for simple anova in [1]
 
 Note: Resampling relies on the pseudo-random number generator module in python ('random'). Due to this, identical inputs to script may produce slightly different output. To force identical outputs for a given input, seed the random generator in script before the first call to the random module (e.g. rd.seed(10)).
 
