@@ -12,7 +12,6 @@ glm.1 <- glm(family="quasibinomial", formula=status ~ type + maternal + paternal
 summary(glm.1)
 
 #GLM closest strain to mean
-### Get closest strain mean
 df <- read.csv('glm_input_010923.csv', header=T, as.is=T) #load dataframe
 
 df$maternal <- as.factor(df$maternal) 
