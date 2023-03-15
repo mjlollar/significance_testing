@@ -1,7 +1,6 @@
 # Description
 
-This repository contains scripts used to generate p-values using various methods. Most scripts can be run from personal computers, with requirements about the format of inouts (usually files must take the format of a comma-separated file (csv) with headers. Headers are required as input flags are mostly header names for dataset categories. An example of an input file is provided (input_example.csv).
-Many of the python scripts can be called with a '--help' flag for information on the exact input requirement (header names) for each script. 
+This repository contains scripts used to generate p-values using various methods. Most scripts can be run without adjustment from personal computers, meeting requirements about the format of inputs (usually files must take the format of a comma-separated file (csv) with headers.) Headers are required as input flags, and many of the python scripts can be called with a '--help' flag for information on the exact input requirement (header names) for each script. 
 
 # Repository includes:
 
