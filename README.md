@@ -9,8 +9,11 @@ Many of the python scripts can be called with a '--help' flag for information on
 5.0 - Combined-cross significance test for 5x5 grid in Figure 2. Generates p-values for each of the 25 crosses. [1]
 
 6.0 - Cross-direction significance test for selected crosses in Figure 2. Generates p-values for each cross used in cross-direciton test. [1]
+
 7.0 - Individual cross significance test for 5x5 grid in Figure 2. Generates p-values for each of the 50 unique crosses in the grid. [1]
+
 8.0 - Population comparison for reproductive failure rates in Figure 1 (B and C). Generates single p-value for each population comparison. [1]
+
 9.0 - Individual cross significance test for samples in Figure 1 (B and C). Generates p-values for individual crosses used in preliminary scans. [1] 
 
 ## Generalied Linear Model
