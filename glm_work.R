@@ -37,9 +37,6 @@ which.min(p_diff)
 # 1  2  3  4  5  6   7  8  9  10
 # f1 f2 f3 f4 f5 zi1 z2 z3 z4 z5 
 
-which.min(m_diff) # 8, Z3
-which.min(p_diff) # 8, Z3
-
 df$maternal <- relevel(df$maternal, ref='Z3')
 df$paternal <- relevel(df$paternal, ref='Z3')
 
