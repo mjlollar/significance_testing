@@ -22,6 +22,7 @@ Note: Resampling relies on the pseudo-random number generator module in python (
 
 ## Multiple testing corrections
 - R scripts for Benjamini-Hochberg corrections adjustments in [1]
+- R scripts for Mann-Whitney methods
 
 ## Anova 
 - R scripts for simple anova in [1]
